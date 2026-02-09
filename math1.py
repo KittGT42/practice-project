@@ -1,1 +1,1 @@
-Shrek = "Shrec"
+shrek = "Shrek"
