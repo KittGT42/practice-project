@@ -9,7 +9,7 @@ def calculatin (a, b, op):
      result = None
      print("Ну ті і пісюн")
 
-a = int(input())
-b = int(input())
+a = int(input("Перша змінна:"))
+b = int(input("Друга змінна:"))
 op = input("Выбор операции(+ - * /):")
 print (calculatin(a, b, op))
