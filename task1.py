@@ -1,3 +1,8 @@
+from fastapi import FastAPI
+
+
+app = FastAPI()
+@app.get("/")
 def calculatin (a, b, op):
     if op == "+":
      return a+b
