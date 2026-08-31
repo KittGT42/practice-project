@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 import uvicorn
 from PIL import Image
 from google import genai
@@ -21,6 +22,24 @@ def test():
     return {
         "answer": response.text
     }
+
+@app.post("/image")
+async def image(file: UploadFile = File(...)):
+
+    image = Image.open(file.file)
+
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=[
+            "Опиши, что изображено на этой фотографии.",
+            image
+        ]
+    )
+
+    return {
+        "answer": response.text
+    }
+
 
 
 
