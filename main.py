@@ -3,8 +3,7 @@ from fastapi import FastAPI, UploadFile, File
 import uvicorn
 from PIL import Image
 from google import genai
-import shutil
-import os
+
 
 app = FastAPI()
 client = genai.Client(api_key="AIzaSyBkiHTeOsHbRii1JVb5NpkRO9mGNeMJq_E")
